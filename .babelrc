@@ -1,0 +1,58 @@
+{
+  "presets": [
+    "@babel/preset-env", "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-template-literals",
+    "@babel/plugin-transform-destructuring",
+    "@babel/plugin-transform-spread",
+    "@babel/plugin-transform-shorthand-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-for-of",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-async-to-generator",
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": ["./src/"],
+        "extensions": [".js", ".jsx", ".es", ".es6", ".mjs"],
+        "stripExtensions": [".js", ".jsx", ".es", ".es6", ".mjs"],
+        "alias": {
+          "src":"./src",
+          "configuration":"./src/configuration",
+          "filterSchema":"./src/configuration/filterSchema.js",
+          "app":"./src/app",
+          "routes":"./app/routes/",
+          "utilities":"./src/app/utilities/",
+          "unitPref":"./src/app/utilities/unitPref.js",
+          "_myProfile":"./src/app/components/protected/_myProfile/",
+          "interactor":"./src/app/models/_interactor/",
+          "shared_interactor":"./src/app/models/_interactor/shared_interactor",
+          "pro_interactor":"./src/app/models/_interactor/pro_interactor",
+          "vet_interactor":"./src/app/models/_interactor/vet_interactor",
+          "interactorHttpFlags":"./src/app/utilities/interactorHttpFlags.js",
+          "_firebaseSetup":"./src/app/models/_firebaseSetup",
+          "store":"./src/app/models/store",
+          "form":"./src/app/components/sharedComponents/form",
+          "components":"./src/app/components/",
+          "_myFiles":"./src/app/components/protected/_myFiles",
+          "pet_detail__recording_List":"./src/app/components/protected/_myFiles/pet_detail__recording_List",
+          "protected":"./src/app/components/protected/",
+          "public":"./src/app/components/public/",
+          "sharedComponents":"./src/app/components/sharedComponents/",
+          "stripeModule":"./src/app/components/sharedComponents/stripeModule",
+          "cardiacCycleComponents":"./src/app/components/sharedComponents/cardiacCycleComponents/",
+          "energyComponents":"./src/app/components/sharedComponents/energyComponents/",
+          "test":"./src/app/test/",
+          "test_components":"./src/app/test/components/",
+          "test_sharedComponents":"./src/app/test/components/sharedComponents/",
+          "styles":"./src/styles/",
+          "material-styles":"./src/styles/material-styles.js",
+
+        }
+      }
+    ]
+  ]
+}
